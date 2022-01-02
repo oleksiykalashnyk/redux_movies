@@ -1,15 +1,13 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import MovieApi from "../../common/apis/movieApi";
 
-export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
-    const movieText = "Potter";
-    const response = await MovieApi.get(`?apiKey=${process.env.REACT_APP_API_KEY}&s=${movieText}&type=movie`);
+export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
+    const response = await MovieApi.get(`?apiKey=${process.env.REACT_APP_API_KEY}&s=${term}&type=movie`);
     return response.data
 })
 
-export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async () => {
-    const seriesText = "Friends";
-    const response = await MovieApi.get(`?apiKey=${process.env.REACT_APP_API_KEY}&s=${seriesText}&type=series`);
+export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async (term) => {
+    const response = await MovieApi.get(`?apiKey=${process.env.REACT_APP_API_KEY}&s=${term}&type=series`);
     return response.data
 })
 
