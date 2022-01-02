@@ -12,7 +12,7 @@ import "./app.scss";
 const App = () => {
     return (
         <div className='app'>
-            <BrowserRouter>
+            <BrowserRouter  basename={"/movie"}>
                 <Header/>
                 <div className="container">
                     <Routes>
