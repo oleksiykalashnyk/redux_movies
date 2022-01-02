@@ -3,6 +3,16 @@
 .card-item {
   cursor: pointer;
   background: $secondary-color;
+  transition: all 300ms ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+    background: #f0f0f0;
+    .card-info {
+      color: #0f171e;
+      transition: all 300ms ease-in;
+    }
+  }
 }
 
 .card-top {
