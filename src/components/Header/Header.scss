@@ -1,0 +1,25 @@
+@import "../../common/colors";
+
+.header {
+    background-color: $primary-color;
+    display: flex;
+    height: 75px;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: $font-primary;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Pushster', cursive;
+    letter-spacing: 2px;
+}
+
+.user-image,
+.user-image img
+{
+    width: 38px;
+    height: 38px;
+}
